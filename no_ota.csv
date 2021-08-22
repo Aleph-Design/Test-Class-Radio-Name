@@ -1,0 +1,12 @@
+# First try:
+# Partition Scheme was set to “Default 4MB SPIFFS” (this must be the same as the PlatformIO sketch is using).
+# I'm using: No OTA (2MB APP/2MB SPIFFS)
+
+# Partition schemes are stored in:
+# /Users/janhkila/Library/Arduino15/packages/esp32/hardware/esp32/1.0.4/tools/partitions
+# no_ota.csv
+# Name,   Type, SubType, Offset,  Size, Flags
+nvs,      data, nvs,     0x9000,  0x5000,
+otadata,  data, ota,     0xe000,  0x2000,
+app0,     app,  ota_0,   0x10000, 0x200000,
+spiffs,   data, spiffs,  0x210000,0x1F0000,
